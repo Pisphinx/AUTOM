@@ -1,0 +1,6 @@
+pip install virtualenv
+pip install --user virtualenv
+$env:PATH
+python -m venv .venv/myEnv
+.\.venv\myEnv\Scripts\Activate.ps1
+.\.venv\myEnv\Scripts\Activate.bat

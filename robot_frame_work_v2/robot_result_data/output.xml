@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230819 14:48:03.993" rpa="false" schemaversion="4">
+<suite id="s1" name="Rbf Website Open Cruise V4" source="D:\POEI_AUTOM\AUTOM\robot_frame_work_v2\robot_data\rbf_website_open_cruise_v4.robot">
+<test id="s1-t1" name="Création d'un compte particulier" line="11">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${myURL}</arg>
+<arg>${myBROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230819 14:48:04.610" level="INFO">Opening browser 'Firefox' to base url 'http://opencruise-ok.sogeti-center.cloud/'.</msg>
+<status status="PASS" starttime="20230819 14:48:04.610" endtime="20230819 14:48:21.123"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230819 14:48:21.139" endtime="20230819 14:48:21.424"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//a[@routerlink="/register"]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230819 14:48:21.424" endtime="20230819 14:48:21.439"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>1 L'Element : [Vous n'avez pas de compte ? Créez-en un ici] trouvé avec succès</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230819 14:48:21.439" level="INFO">1 L'Element : [Vous n'avez pas de compte ? Créez-en un ici] trouvé avec succès</msg>
+<status status="PASS" starttime="20230819 14:48:21.439" endtime="20230819 14:48:21.439"/>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${register}</var>
+<arg>xpath=//a[@routerlink="/register"]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20230819 14:48:21.455" level="INFO">${register} = &lt;selenium.webdriver.remote.webelement.WebElement (session="29470199-c022-4cb4-890f-937763d325a4", element="019f38c6-963c-4619-8452-06788e26ed55")&gt;</msg>
+<status status="PASS" starttime="20230819 14:48:21.439" endtime="20230819 14:48:21.455"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${register}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:21.455" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="29470199-c022-4cb4-890f-937763d325a4", element="019f38c6-963c-4619-8452-06788e26ed55")&gt;'.</msg>
+<status status="PASS" starttime="20230819 14:48:21.455" endtime="20230819 14:48:21.856"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//h2[contains(.,"Formulaire d'inscription")]</arg>
+<arg>timeout=2s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230819 14:48:21.856" endtime="20230819 14:48:22.010"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>2 L'Element : [Formulaire d'inscription] trouvé avec succès</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230819 14:48:22.010" level="INFO">2 L'Element : [Formulaire d'inscription] trouvé avec succès</msg>
+<status status="PASS" starttime="20230819 14:48:22.010" endtime="20230819 14:48:22.010"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//label[contains(.,"Particulier")]</arg>
+<arg>timeout=1s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230819 14:48:22.010" endtime="20230819 14:48:22.041"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>3 L'Element : [Particulier] trouvé avec succès</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230819 14:48:22.041" level="INFO">3 L'Element : [Particulier] trouvé avec succès</msg>
+<status status="PASS" starttime="20230819 14:48:22.041" endtime="20230819 14:48:22.041"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@type="radio" and @value="1"]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230819 14:48:22.041" endtime="20230819 14:48:22.041"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>4 L'Element : [de type radio] trouvé avec succès</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230819 14:48:22.041" level="INFO">4 L'Element : [de type radio] trouvé avec succès</msg>
+<status status="PASS" starttime="20230819 14:48:22.041" endtime="20230819 14:48:22.041"/>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${comptePart}</var>
+<arg>xpath=//input[@type="radio" and @value="1"]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20230819 14:48:22.057" level="INFO">${comptePart} = &lt;selenium.webdriver.remote.webelement.WebElement (session="29470199-c022-4cb4-890f-937763d325a4", element="82c85d4a-4561-4c35-b6f0-3f34f00f34de")&gt;</msg>
+<status status="PASS" starttime="20230819 14:48:22.041" endtime="20230819 14:48:22.057"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${comptePart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:22.057" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="29470199-c022-4cb4-890f-937763d325a4", element="82c85d4a-4561-4c35-b6f0-3f34f00f34de")&gt;'.</msg>
+<status status="PASS" starttime="20230819 14:48:22.057" endtime="20230819 14:48:22.310"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="prenom"]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230819 14:48:22.310" endtime="20230819 14:48:22.310"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>4 L'Element : [de type radio] trouvé avec succès</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230819 14:48:22.310" level="INFO">4 L'Element : [de type radio] trouvé avec succès</msg>
+<status status="PASS" starttime="20230819 14:48:22.310" endtime="20230819 14:48:22.310"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="prenom"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:22.310" level="INFO">Clicking element 'xpath=//input[@formcontrolname="prenom"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:22.310" endtime="20230819 14:48:22.642"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="prenom"]</arg>
+<arg>Jade</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:22.642" level="INFO">Typing text 'Jade' into text field 'xpath=//input[@formcontrolname="prenom"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:22.642" endtime="20230819 14:48:22.673"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="nom"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:22.673" level="INFO">Clicking element 'xpath=//input[@formcontrolname="nom"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:22.673" endtime="20230819 14:48:22.926"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="nom"]</arg>
+<arg>Crochet</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:22.926" level="INFO">Typing text 'Crochet' into text field 'xpath=//input[@formcontrolname="nom"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:22.926" endtime="20230819 14:48:22.958"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="dateNaissance"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:22.958" level="INFO">Clicking element 'xpath=//input[@formcontrolname="dateNaissance"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:22.958" endtime="20230819 14:48:23.227"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="dateNaissance"]</arg>
+<arg>1993-12-31</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:23.227" level="INFO">Typing text '1993-12-31' into text field 'xpath=//input[@formcontrolname="dateNaissance"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:23.227" endtime="20230819 14:48:23.243"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="adresse"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:23.243" level="INFO">Clicking element 'xpath=//input[@formcontrolname="adresse"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:23.243" endtime="20230819 14:48:23.490"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="adresse"]</arg>
+<arg>12 rue de la victoire</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:23.497" level="INFO">Typing text '12 rue de la victoire' into text field 'xpath=//input[@formcontrolname="adresse"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:23.497" endtime="20230819 14:48:23.559"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//select[@formcontrolname="currentPays" and contains(.,"France")]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230819 14:48:23.559" endtime="20230819 14:48:23.597"/>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${pays}</var>
+<arg>xpath=//select[@formcontrolname="currentPays" and option[contains(text(),"France")]]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20230819 14:48:23.597" level="INFO">${pays} = &lt;selenium.webdriver.remote.webelement.WebElement (session="29470199-c022-4cb4-890f-937763d325a4", element="0e3a488b-8573-4267-a3ba-47b5dedf43d4")&gt;</msg>
+<status status="PASS" starttime="20230819 14:48:23.597" endtime="20230819 14:48:23.597"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${pays}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:23.597" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="29470199-c022-4cb4-890f-937763d325a4", element="0e3a488b-8573-4267-a3ba-47b5dedf43d4")&gt;'.</msg>
+<status status="PASS" starttime="20230819 14:48:23.597" endtime="20230819 14:48:23.876"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${pays}</arg>
+<arg>France</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230819 14:48:23.876" level="INFO">Selecting options from selection list '&lt;selenium.webdriver.remote.webelement.WebElement (session="29470199-c022-4cb4-890f-937763d325a4", element="0e3a488b-8573-4267-a3ba-47b5dedf43d4")&gt;' by label France.</msg>
+<status status="PASS" starttime="20230819 14:48:23.876" endtime="20230819 14:48:24.146"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//select[@formcontrolname="ville" and option[contains(text(),"Nice")]]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230819 14:48:24.146" endtime="20230819 14:48:24.161"/>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${ville}</var>
+<arg>xpath=//select[@formcontrolname="ville" and option[contains(text(),"Nice")]]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20230819 14:48:24.177" level="INFO">${ville} = &lt;selenium.webdriver.remote.webelement.WebElement (session="29470199-c022-4cb4-890f-937763d325a4", element="de4e232c-ac7c-4623-ac12-983d68aebdfb")&gt;</msg>
+<status status="PASS" starttime="20230819 14:48:24.161" endtime="20230819 14:48:24.177"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ville}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:24.177" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="29470199-c022-4cb4-890f-937763d325a4", element="de4e232c-ac7c-4623-ac12-983d68aebdfb")&gt;'.</msg>
+<status status="PASS" starttime="20230819 14:48:24.177" endtime="20230819 14:48:24.415"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>${ville}</arg>
+<arg>Nice</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<msg timestamp="20230819 14:48:24.415" level="INFO">Selecting options from selection list '&lt;selenium.webdriver.remote.webelement.WebElement (session="29470199-c022-4cb4-890f-937763d325a4", element="de4e232c-ac7c-4623-ac12-983d68aebdfb")&gt;' by label Nice.</msg>
+<status status="PASS" starttime="20230819 14:48:24.415" endtime="20230819 14:48:24.663"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="codePostal"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:24.663" level="INFO">Clicking element 'xpath=//input[@formcontrolname="codePostal"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:24.663" endtime="20230819 14:48:24.894"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="codePostal"]</arg>
+<arg>44000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:24.894" level="INFO">Typing text '44000' into text field 'xpath=//input[@formcontrolname="codePostal"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:24.894" endtime="20230819 14:48:24.917"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="passport"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:24.917" level="INFO">Clicking element 'xpath=//input[@formcontrolname="passport"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:24.917" endtime="20230819 14:48:25.164"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="passport"]</arg>
+<arg>898899897</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:25.164" level="INFO">Typing text '898899897' into text field 'xpath=//input[@formcontrolname="passport"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:25.164" endtime="20230819 14:48:25.202"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="cin"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:25.202" level="INFO">Clicking element 'xpath=//input[@formcontrolname="cin"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:25.202" endtime="20230819 14:48:25.449"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="cin"]</arg>
+<arg>798799798</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:25.449" level="INFO">Typing text '798799798' into text field 'xpath=//input[@formcontrolname="cin"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:25.449" endtime="20230819 14:48:25.481"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="username"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:25.481" level="INFO">Clicking element 'xpath=//input[@formcontrolname="username"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:25.481" endtime="20230819 14:48:25.735"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="username"]</arg>
+<arg>Pape_d55e295c-191e-4153-ae7f-fa104b93861e@yahoo.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:25.735" level="INFO">Typing text 'Pape_d55e295c-191e-4153-ae7f-fa104b93861e@yahoo.com' into text field 'xpath=//input[@formcontrolname="username"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:25.735" endtime="20230819 14:48:25.835"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="tel"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:25.850" level="INFO">Clicking element 'xpath=//input[@formcontrolname="tel"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:25.835" endtime="20230819 14:48:26.082"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="tel"]</arg>
+<arg>+33679748009</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:26.082" level="INFO">Typing text '+33679748009' into text field 'xpath=//input[@formcontrolname="tel"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:26.082" endtime="20230819 14:48:26.151"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="password"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:26.151" level="INFO">Clicking element 'xpath=//input[@formcontrolname="password"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:26.151" endtime="20230819 14:48:26.421"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="password"]</arg>
+<arg>Matyththb7</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:26.421" level="INFO">Typing text 'Matyththb7' into text field 'xpath=//input[@formcontrolname="password"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:26.421" endtime="20230819 14:48:26.483"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="confirmPassword"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:26.499" level="INFO">Clicking element 'xpath=//input[@formcontrolname="confirmPassword"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:26.499" endtime="20230819 14:48:26.737"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="confirmPassword"]</arg>
+<arg>Matyththb7</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:26.737" level="INFO">Typing text 'Matyththb7' into text field 'xpath=//input[@formcontrolname="confirmPassword"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:26.737" endtime="20230819 14:48:26.769"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="nomConjoint"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:26.784" level="INFO">Clicking element 'xpath=//input[@formcontrolname="nomConjoint"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:26.784" endtime="20230819 14:48:27.022"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="nomConjoint"]</arg>
+<arg>De la Roche</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:27.022" level="INFO">Typing text 'De la Roche' into text field 'xpath=//input[@formcontrolname="nomConjoint"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:27.022" endtime="20230819 14:48:27.069"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="prenomConjoint"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:27.069" level="INFO">Clicking element 'xpath=//input[@formcontrolname="prenomConjoint"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:27.069" endtime="20230819 14:48:27.323"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="prenomConjoint"]</arg>
+<arg>Chloé</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:27.323" level="INFO">Typing text 'Chloé' into text field 'xpath=//input[@formcontrolname="prenomConjoint"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:27.323" endtime="20230819 14:48:27.354"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="dateNaissanceConjoint"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:27.354" level="INFO">Clicking element 'xpath=//input[@formcontrolname="dateNaissanceConjoint"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:27.354" endtime="20230819 14:48:27.586"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="dateNaissanceConjoint"]</arg>
+<arg>2001-11-28</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:27.586" level="INFO">Typing text '2001-11-28' into text field 'xpath=//input[@formcontrolname="dateNaissanceConjoint"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:27.586" endtime="20230819 14:48:27.602"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//button[@class="btn btn-primary" and contains(normalize-space(), "Créer votre compte")]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230819 14:48:27.602" endtime="20230819 14:48:27.608"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>5 L'Element : [Créer votre compte] trouvé avec succès</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230819 14:48:27.608" level="INFO">5 L'Element : [Créer votre compte] trouvé avec succès</msg>
+<status status="PASS" starttime="20230819 14:48:27.608" endtime="20230819 14:48:27.608"/>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${creataccompte}</var>
+<arg>xpath=//button[@class="btn btn-primary" and contains(normalize-space(), "Créer votre compte")]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20230819 14:48:27.608" level="INFO">${creataccompte} = &lt;selenium.webdriver.remote.webelement.WebElement (session="29470199-c022-4cb4-890f-937763d325a4", element="dc47c651-d934-49cd-8b95-e8e84298bff0")&gt;</msg>
+<status status="PASS" starttime="20230819 14:48:27.608" endtime="20230819 14:48:27.608"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${creataccompte}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:27.608" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="29470199-c022-4cb4-890f-937763d325a4", element="dc47c651-d934-49cd-8b95-e8e84298bff0")&gt;'.</msg>
+<status status="PASS" starttime="20230819 14:48:27.608" endtime="20230819 14:48:27.870"/>
+</kw>
+<status status="PASS" starttime="20230819 14:48:04.610" endtime="20230819 14:48:27.870"/>
+</test>
+<test id="s1-t2" name="Login compte admin" line="75">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${myURL}</arg>
+<arg>${myBROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230819 14:48:27.870" level="INFO">Opening browser 'Firefox' to base url 'http://opencruise-ok.sogeti-center.cloud/'.</msg>
+<status status="PASS" starttime="20230819 14:48:27.870" endtime="20230819 14:48:45.204"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230819 14:48:45.204" endtime="20230819 14:48:45.506"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//label[@for="username" and contains(text(), "Identifiant")]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230819 14:48:45.506" endtime="20230819 14:48:45.550"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>7 L'Element : [Identifiant] trouvé avec succès</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230819 14:48:45.554" level="INFO">7 L'Element : [Identifiant] trouvé avec succès</msg>
+<status status="PASS" starttime="20230819 14:48:45.554" endtime="20230819 14:48:45.554"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="username"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:45.554" level="INFO">Clicking element 'xpath=//input[@formcontrolname="username"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:45.554" endtime="20230819 14:48:45.894"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="username"]</arg>
+<arg>admin@test.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:45.894" level="INFO">Typing text 'admin@test.com' into text field 'xpath=//input[@formcontrolname="username"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:45.894" endtime="20230819 14:48:45.942"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//label[@for="password" and contains(text(), "Mot de passe")]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230819 14:48:45.942" endtime="20230819 14:48:45.950"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>8 L'Element : [Mot de passe] trouvé avec succès</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230819 14:48:45.950" level="INFO">8 L'Element : [Mot de passe] trouvé avec succès</msg>
+<status status="PASS" starttime="20230819 14:48:45.950" endtime="20230819 14:48:45.950"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="password"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:45.950" level="INFO">Clicking element 'xpath=//input[@formcontrolname="password"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:45.950" endtime="20230819 14:48:46.182"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@formcontrolname="password"]</arg>
+<arg>IBCegos01</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:46.182" level="INFO">Typing text 'IBCegos01' into text field 'xpath=//input[@formcontrolname="password"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:46.182" endtime="20230819 14:48:46.214"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//button[@class="btn btn-primary" and contains(text(), "Connexion")]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230819 14:48:46.214" endtime="20230819 14:48:46.218"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>9 L'Element : [Connexion] trouvé avec succès</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230819 14:48:46.218" level="INFO">9 L'Element : [Connexion] trouvé avec succès</msg>
+<status status="PASS" starttime="20230819 14:48:46.218" endtime="20230819 14:48:46.218"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>10 Administrateur connecté avec succès</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230819 14:48:46.218" level="INFO">10 Administrateur connecté avec succès</msg>
+<status status="PASS" starttime="20230819 14:48:46.218" endtime="20230819 14:48:46.218"/>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${connexion}</var>
+<arg>xpath=//button[@class="btn btn-primary" and contains(text(), "Connexion")]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20230819 14:48:46.226" level="INFO">${connexion} = &lt;selenium.webdriver.remote.webelement.WebElement (session="c90efd95-67d3-4491-9803-6bc6ed533074", element="92a72773-4f14-423b-8218-54caccdf8445")&gt;</msg>
+<status status="PASS" starttime="20230819 14:48:46.222" endtime="20230819 14:48:46.226"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${connexion}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:46.226" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="c90efd95-67d3-4491-9803-6bc6ed533074", element="92a72773-4f14-423b-8218-54caccdf8445")&gt;'.</msg>
+<status status="PASS" starttime="20230819 14:48:46.226" endtime="20230819 14:48:46.460"/>
+</kw>
+<status status="PASS" starttime="20230819 14:48:27.870" endtime="20230819 14:48:46.460"/>
+</test>
+<test id="s1-t3" name="Activation d'un compte utilisateur" line="91">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//mat-icon[@data-toggle="dropdown" and contains(.,"settings")]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230819 14:48:46.463" endtime="20230819 14:48:47.106"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>12 L'Element : [Connexion] trouvé avec succès</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230819 14:48:47.114" level="INFO">12 L'Element : [Connexion] trouvé avec succès</msg>
+<status status="PASS" starttime="20230819 14:48:47.114" endtime="20230819 14:48:47.114"/>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${settings}</var>
+<arg>xpath=//mat-icon[@data-toggle="dropdown" and contains(.,"settings")]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20230819 14:48:47.126" level="INFO">${settings} = &lt;selenium.webdriver.remote.webelement.WebElement (session="c90efd95-67d3-4491-9803-6bc6ed533074", element="4f8a58ea-576e-4dec-ba25-ee574d28ee3b")&gt;</msg>
+<status status="PASS" starttime="20230819 14:48:47.118" endtime="20230819 14:48:47.126"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${settings}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:47.126" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="c90efd95-67d3-4491-9803-6bc6ed533074", element="4f8a58ea-576e-4dec-ba25-ee574d28ee3b")&gt;'.</msg>
+<status status="PASS" starttime="20230819 14:48:47.126" endtime="20230819 14:48:47.350"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[@href="/admin/utilisateur" and contains(.,"Utilisateurs")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:47.350" level="INFO">Clicking element 'xpath=//a[@href="/admin/utilisateur" and contains(.,"Utilisateurs")]'.</msg>
+<status status="PASS" starttime="20230819 14:48:47.350" endtime="20230819 14:48:47.707"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//div[@class="mat-step-label mat-step-label-active"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:47.711" level="INFO">Clicking element 'xpath=//div[@class="mat-step-label mat-step-label-active"]'.</msg>
+<status status="PASS" starttime="20230819 14:48:47.707" endtime="20230819 14:48:47.988"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//mat-icon[@data-toggle="dropdown" and contains(.,"settings")]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230819 14:48:47.992" endtime="20230819 14:48:48.040"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>13 L'Élement : [settings] trouvé avec succès</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230819 14:48:48.041" level="INFO">13 L'Élement : [settings] trouvé avec succès</msg>
+<status status="PASS" starttime="20230819 14:48:48.041" endtime="20230819 14:48:48.041"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//tr[.//span[contains(., 'Pape_d55e295c-191e-4153-ae7f-fa104b93861e@yahoo.com')]]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230819 14:48:48.043" endtime="20230819 14:48:50.334"/>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${ActEmail}</var>
+<arg>xpath=//tr[.//span[contains(., 'Pape_d55e295c-191e-4153-ae7f-fa104b93861e@yahoo.com')]]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20230819 14:48:50.342" level="INFO">${ActEmail} = &lt;selenium.webdriver.remote.webelement.WebElement (session="c90efd95-67d3-4491-9803-6bc6ed533074", element="0fb4b235-031d-467c-8cbf-a87550f64f49")&gt;</msg>
+<status status="PASS" starttime="20230819 14:48:50.334" endtime="20230819 14:48:50.342"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ActEmail}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230819 14:48:50.342" endtime="20230819 14:48:50.382"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${ActEmail}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230819 14:48:50.382" endtime="20230819 14:48:50.426"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Le compte avec l'email : [Pape_d55e295c-191e-4153-ae7f-fa104b93861eyahoo.fr] trouvé et ciblé avec succès</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230819 14:48:50.426" level="INFO">Le compte avec l'email : [Pape_d55e295c-191e-4153-ae7f-fa104b93861eyahoo.fr] trouvé et ciblé avec succès</msg>
+<status status="PASS" starttime="20230819 14:48:50.426" endtime="20230819 14:48:50.426"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//span[contains(., 'Pape_d55e295c-191e-4153-ae7f-fa104b93861e@yahoo.com')]/ancestor::tr//mat-icon[contains(., 'Approuver')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<msg timestamp="20230819 14:48:55.689" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230819 14:48:55.689" level="FAIL">Element 'xpath=//span[contains(., 'Pape_d55e295c-191e-4153-ae7f-fa104b93861e@yahoo.com')]/ancestor::tr//mat-icon[contains(., 'Approuver')]' did not appear in 5 seconds.</msg>
+<status status="FAIL" starttime="20230819 14:48:50.426" endtime="20230819 14:48:55.750"/>
+</kw>
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${IcApprouver}</var>
+<arg>xpath=//span[contains(., 'Pape_d55e295c-191e-4153-ae7f-fa104b93861e@yahoo.com')]/ancestor::tr//mat-icon[contains(., 'Approuver')]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="NOT RUN" starttime="20230819 14:48:55.750" endtime="20230819 14:48:55.750"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${IcApprouver}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230819 14:48:55.750" endtime="20230819 14:48:55.750"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${IcApprouver}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="NOT RUN" starttime="20230819 14:48:55.750" endtime="20230819 14:48:55.750"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Le compte avec l'email : [Pape_d55e295c-191e-4153-ae7f-fa104b93861e@yahoo.com] pointé et approuvé avec succès</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20230819 14:48:55.754" endtime="20230819 14:48:55.754"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${IcApprouver}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230819 14:48:55.754" endtime="20230819 14:48:55.754"/>
+</kw>
+<status status="FAIL" starttime="20230819 14:48:46.460" endtime="20230819 14:48:55.754">Element 'xpath=//span[contains(., 'Pape_d55e295c-191e-4153-ae7f-fa104b93861e@yahoo.com')]/ancestor::tr//mat-icon[contains(., 'Approuver')]' did not appear in 5 seconds.</status>
+</test>
+<test id="s1-t4" name="Deconnexion compte ADMIN" line="144">
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${welcome}</var>
+<arg>xpath=//button[@class="btn dropdown-toggle" and contains(text(),"Bienvenue ADMIN TEST")]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20230819 14:48:55.762" level="INFO">${welcome} = &lt;selenium.webdriver.remote.webelement.WebElement (session="c90efd95-67d3-4491-9803-6bc6ed533074", element="2053390b-5650-434a-b860-6213ba73e24e")&gt;</msg>
+<status status="PASS" starttime="20230819 14:48:55.754" endtime="20230819 14:48:55.762"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${welcome}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230819 14:48:55.762" endtime="20230819 14:48:55.782"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${welcome}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230819 14:48:55.782" endtime="20230819 14:48:55.810"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${welcome}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:55.810" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="c90efd95-67d3-4491-9803-6bc6ed533074", element="2053390b-5650-434a-b860-6213ba73e24e")&gt;'.</msg>
+<status status="PASS" starttime="20230819 14:48:55.810" endtime="20230819 14:48:56.043"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[@class="dropdown-item" and contains(.,"Se déconnecter")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230819 14:48:56.043" level="INFO">Clicking element 'xpath=//button[@class="dropdown-item" and contains(.,"Se déconnecter")]'.</msg>
+<status status="PASS" starttime="20230819 14:48:56.043" endtime="20230819 14:48:56.308"/>
+</kw>
+<status status="PASS" starttime="20230819 14:48:55.754" endtime="20230819 14:48:56.312"/>
+</test>
+<status status="FAIL" starttime="20230819 14:48:03.993" endtime="20230819 14:48:56.316"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="1" skip="0" id="s1" name="Rbf Website Open Cruise V4">Rbf Website Open Cruise V4</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
